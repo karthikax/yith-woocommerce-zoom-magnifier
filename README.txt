@@ -1,0 +1,80 @@
+=== YITH WooCommerce Zoom Magnifier ===
+
+Contributors: yithemes
+Tags: zoom, magnifier, woocommerce, products, themes, yit, e-commerce, shop
+Requires at least: 3.5.1
+Tested up to: 3.5.1
+Stable tag: 1.0.0
+License: GPLv2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+
+YITH WooCommerce Zoom Magnifier is a Wordpress plugins that enables you to add a zoom effect to product images.
+
+== Description ==
+
+= Improve the user experience, improve your sales =
+
+Offer to your visitors a chance to inspect in detail the quality of your products. With YITH WooCommerce Zoom Magnifier you can add a zoom effect to all your product images.
+The Wordpress plugin also adds a slider below the featured image with your product gallery images.
+
+A working demo is available [here](http://demo.yithemes.com/room09/product/africa-style/). Full documentation is available [here](http://yithemes.com/docs-plugins/yith_magnifier/).
+
+= Installation =
+
+Once you have installed the plugin, you just need to activate the plugin in order to enable it.
+
+= Configuration =
+
+YITH WooCommerce Zoom Magnifier will add a new tab called "Magnifier" below the Woocommerce -> Settings menu. Here you are able to configure all the plugin settings.
+
+= Developer =
+
+Are you a developer? Want to customize the templates or the style of the plugin? Read on the [documentation](http://yithemes.com/docs-plugins/yith_magnifier/) and discover how to do that.
+
+== Installation ==
+
+1. Unzip the downloaded zip file.
+2. Upload the plugin folder into the `wp-content/plugins/` directory of your WordPress site.
+3. Activate `YITH WooCommerce Zoom Magnifier` from Plugins page
+
+== Frequently Asked Questions ==
+
+= The size of the Zoom image is not the size I setted. Why? =
+If you enabled the plugin after you uploaded the images of the product you need to [regenerate the thumbnails](http://wordpress.org/extend/plugins/regenerate-thumbnails/ "regenerate the thumbnails") before to use it. Another reason could be that the size setted for the zoom images is greather than the original image size.
+
+= I'm not able to change the sizes of Zoom Image. Why? =
+The size of the Zoom Image is automatically setted. If you want to change these values you just need to untick the option Forcing Zoom Image sizes.
+
+== Screenshots ==
+
+1. The plugin at work displaying the magnifier
+2. The Magnifier settings page
+
+== Changelog ==
+
+= 1.0.0 =
+
+* Initial release
+
+== Suggestions ==
+
+If you have suggestions about how to improve YITH WooCommerce Zoom Magnifier, you can [write us](mailto:plugins@yithemes.com "Your Inspiration Themes") so we can bundle them into YITH Zoom WooCommerce Magnifier.
+
+== Translators ==
+
+= Available Languages =
+* English (Default)
+* Italiano
+
+If you have created your own language pack, or have an update for an existing one, you can send [gettext PO and MO file](http://codex.wordpress.org/Translating_WordPress "Translating WordPress")
+[use](http://yithemes.com/contact/ "Your Inspiration Themes") so we can bundle it into YITH WooCommerce Zoom Magnfier Languages.
+
+== Documentation ==
+
+Full documentation is available [here](http://yithemes.com/docs-plugins/yith_magnifier/).
+
+== Upgrade notice ==
+
+= 1.0.0 =
+
+Initial release

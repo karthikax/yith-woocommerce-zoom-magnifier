@@ -1,4 +1,4 @@
-yith_magnifier
+YITH WooCommerce Zoom Magnifier
 ==============
 
-YITH WooCommerce Magnifier is Wordpress plugins that enables you to add a zoom effect to product images. It requires WooCommerce.
+YITH WooCommerce Zoom Magnifier is Wordpress plugins that enables you to add a zoom effect to product images. It requires WooCommerce.
