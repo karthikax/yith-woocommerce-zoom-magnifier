@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: YITH WooCommerce Magnifier v1.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-05-17 18:04+0100\n"
-"PO-Revision-Date: 2013-05-17 18:06+0100\n"
+"POT-Creation-Date: 2013-09-04 16:19+0100\n"
+"PO-Revision-Date: 2013-09-04 16:19+0100\n"
 "Last-Translator: Your Inspiration Themes <plugins@yithemes.com>\n"
 "Language-Team: \n"
 "Language: it_IT\n"
@@ -35,7 +35,7 @@ msgid "The size of images used within the magnifier box"
 msgstr "La dimensione dell'immagine usata all'interno del box dello zoom"
 
 # @ yit
-#: class.yith-wcmg-admin.php:168 class.yith-wcmg-admin.php:206
+#: class.yith-wcmg-admin.php:168 class.yith-wcmg-admin.php:208
 msgid "General Settings"
 msgstr "Impostazioni Generali"
 
@@ -45,23 +45,23 @@ msgid "Slider"
 msgstr "Slider"
 
 # @ yit
-#: class.yith-wcmg-admin.php:213
+#: class.yith-wcmg-admin.php:215
 msgid "Enable YITH Magnifier"
 msgstr "Abilita YITH Magnifier"
 
 # @ yit
-#: class.yith-wcmg-admin.php:214
+#: class.yith-wcmg-admin.php:216
 msgid "Enable the plugin or use the Woocommerce default product image."
 msgstr ""
 "Abilita il plugin oppure utilizza l'immagine di default di Woocommerce."
 
 # @ yit
-#: class.yith-wcmg-admin.php:222
+#: class.yith-wcmg-admin.php:224
 msgid "Forcing Zoom Image sizes"
 msgstr "Forza le dimensioni delle immagini di Zoom"
 
 # @ yit
-#: class.yith-wcmg-admin.php:223
+#: class.yith-wcmg-admin.php:225
 msgid ""
 "If disabled, you will able to customize the sizes of Zoom Images. Please "
 "disable at your own risk; the magnifier should not properly work with "
@@ -72,116 +72,116 @@ msgstr ""
 "correttamente con immagini di dimensioni non proporzionali tra di loro."
 
 # @ yit
-#: class.yith-wcmg-admin.php:234
+#: class.yith-wcmg-admin.php:236
 msgid "Magnifier Settings"
 msgstr "Impostazioni Magnifier"
 
 # @ yit
-#: class.yith-wcmg-admin.php:241
+#: class.yith-wcmg-admin.php:243
 msgid "Zoom Area Width"
 msgstr "Larghezza area di zoom"
 
 # @ yit
-#: class.yith-wcmg-admin.php:242
+#: class.yith-wcmg-admin.php:244
 msgid "The width of magnifier box (default: auto)"
 msgstr "Larghezza del box di zoom (default: auto)"
 
 # @ yit
-#: class.yith-wcmg-admin.php:250
+#: class.yith-wcmg-admin.php:252
 msgid "Zoom Area Height"
 msgstr "Altezza area di zoom"
 
 # @ yit
-#: class.yith-wcmg-admin.php:251
+#: class.yith-wcmg-admin.php:253
 msgid "The height of magnifier box (default: auto)"
 msgstr "Larghezza del box di zoom (default: auto)"
 
 # @ yit
-#: class.yith-wcmg-admin.php:259
+#: class.yith-wcmg-admin.php:261
 msgid "Zoom Area Position"
 msgstr "Posizione area di zoom"
 
 # @ yit
-#: class.yith-wcmg-admin.php:260
+#: class.yith-wcmg-admin.php:262
 msgid "The magnifier position"
 msgstr "Posizione del Magnifier"
 
 # @ yit
-#: class.yith-wcmg-admin.php:266
+#: class.yith-wcmg-admin.php:268
 msgid "Right"
 msgstr "Destra"
 
 # @ yit
-#: class.yith-wcmg-admin.php:267 class.yith-wcmg-admin.php:280
+#: class.yith-wcmg-admin.php:269 class.yith-wcmg-admin.php:282
 msgid "Inside"
 msgstr "Interno"
 
 # @ yit
-#: class.yith-wcmg-admin.php:272
+#: class.yith-wcmg-admin.php:274
 msgid "Zoom Area Mobile Position"
 msgstr "Posizione area di zoom nei dispositivi mobili"
 
 # @ yit
-#: class.yith-wcmg-admin.php:273
+#: class.yith-wcmg-admin.php:275
 msgid "The magnifier position with mobile devices (iPhone, Android, etc.)"
 msgstr "Posizione area di zoom nei dispositivi mobili (iPhone, Android, ecc.)"
 
 # @ yit
-#: class.yith-wcmg-admin.php:279
+#: class.yith-wcmg-admin.php:281
 msgid "Default"
 msgstr "Default"
 
 # @ yit
-#: class.yith-wcmg-admin.php:281
+#: class.yith-wcmg-admin.php:283
 msgid "Disable"
 msgstr "Disabilitato"
 
 # @ yit
-#: class.yith-wcmg-admin.php:286
+#: class.yith-wcmg-admin.php:288
 msgid "Loading label"
 msgstr "Messaggio Caricamento"
 
 # @ yit
-#: class.yith-wcmg-admin.php:289 class.yith-wcmg-admin.php:290
+#: class.yith-wcmg-admin.php:291 class.yith-wcmg-admin.php:292
 msgid "Loading..."
 msgstr "Caricamento..."
 
 # @ yit
-#: class.yith-wcmg-admin.php:316
+#: class.yith-wcmg-admin.php:318
 msgid "Lens Opacity"
 msgstr "Opacità lente"
 
 # @ yit
-#: class.yith-wcmg-admin.php:340
+#: class.yith-wcmg-admin.php:342
 msgid "Blur"
 msgstr "Sfocatura"
 
 # @ yit
-#: class.yith-wcmg-admin.php:341
+#: class.yith-wcmg-admin.php:343
 msgid "Add a blur effect to the small image on mouse hover."
 msgstr "Aggiungi un effetto sfocatura all'immagine al movimento del mouse."
 
 # @ yit
-#: class.yith-wcmg-admin.php:352
+#: class.yith-wcmg-admin.php:354
 msgid "Slider Settings"
 msgstr "Impostazioni Slider"
 
 # @ yit
-#: class.yith-wcmg-admin.php:359
+#: class.yith-wcmg-admin.php:361
 msgid "Enable Slider"
 msgstr "Abilita Slider"
 
 # @ yit
-#: class.yith-wcmg-admin.php:360
+#: class.yith-wcmg-admin.php:362
 msgid "Enable Thumbnail slider."
 msgstr "Abilita lo sliding delle thumbnail."
 
 # @ yit
-#: class.yith-wcmg-admin.php:368
+#: class.yith-wcmg-admin.php:370
 msgid "Enable Slider Responsive"
 msgstr "Abilita Responsive Slider"
 
-#: class.yith-wcmg-admin.php:369
+#: class.yith-wcmg-admin.php:371
 msgid ""
 "The option fits the thumbnails within the available space. Disable it if you "
 "want to manage by yourself the thumbnails (eg. add margins, paddings, etc.)"
@@ -192,32 +192,32 @@ msgstr ""
 "margini, padding, ecc.)"
 
 # @ yit
-#: class.yith-wcmg-admin.php:377
+#: class.yith-wcmg-admin.php:379
 msgid "Items"
 msgstr "Elementi"
 
 # @ yit
-#: class.yith-wcmg-admin.php:378
+#: class.yith-wcmg-admin.php:380
 msgid "Number of items to show"
 msgstr "Numero di elementi da mostrare"
 
 # @ yit
-#: class.yith-wcmg-admin.php:389
+#: class.yith-wcmg-admin.php:391
 msgid "Circular carousel"
 msgstr "Slider circolare"
 
 # @ yit
-#: class.yith-wcmg-admin.php:390
+#: class.yith-wcmg-admin.php:392
 msgid "Determines whether the carousel should be circular."
 msgstr "Selezionare se impostare lo slider circolare."
 
 # @ yit
-#: class.yith-wcmg-admin.php:398
+#: class.yith-wcmg-admin.php:400
 msgid "Infinite carousel"
 msgstr "Slider infinito"
 
 # @ yit
-#: class.yith-wcmg-admin.php:399
+#: class.yith-wcmg-admin.php:401
 msgid ""
 "Determines whether the carousel should be infinite. Note: It is possible to "
 "create a non-circular, infinite carousel, but it is not possible to create a "
@@ -227,10 +227,70 @@ msgstr ""
 "creare uno slider infinito non circolare ma non è possibile il contrario."
 
 # @ yit
-#: class.yith-wcmg-admin.php:626
+#: class.yith-wcmg-admin.php:628
 msgid "Settings"
 msgstr "Impostazioni"
 
-#: class.yith-wcmg-admin.php:627
+#: class.yith-wcmg-admin.php:629
 msgid "Docs"
 msgstr "Docs"
+
+#: yit-common/yith-panel.php:406
+msgid "Select a date"
+msgstr ""
+
+#: yit-common/yith-panel.php:407
+msgid "Hours"
+msgstr ""
+
+#: yit-common/yith-panel.php:408 yit-common/yith-panel.php:409
+msgid "Minutes"
+msgstr ""
+
+#: yit-common/yith-panel.php:417
+msgid "Upload"
+msgstr ""
+
+#: yit-common/yith-panel.php:444
+msgid "px"
+msgstr ""
+
+#: yit-common/yith-panel.php:445
+msgid "em"
+msgstr ""
+
+#: yit-common/yith-panel.php:446
+msgid "pt"
+msgstr ""
+
+#: yit-common/yith-panel.php:447
+msgid "rem"
+msgstr ""
+
+#: yit-common/yith-panel.php:457
+msgid "Select a font family"
+msgstr ""
+
+#: yit-common/yith-panel.php:465
+msgid "Regular"
+msgstr ""
+
+#: yit-common/yith-panel.php:466
+msgid "Bold"
+msgstr ""
+
+#: yit-common/yith-panel.php:467
+msgid "Extra bold"
+msgstr ""
+
+#: yit-common/yith-panel.php:468
+msgid "Italic"
+msgstr ""
+
+#: yit-common/yith-panel.php:469
+msgid "Italic bold"
+msgstr ""
+
+#: yit-common/yith-panel.php:481
+msgid "Click to preview"
+msgstr ""

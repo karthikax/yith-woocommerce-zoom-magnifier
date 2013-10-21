@@ -48,7 +48,7 @@ if( ! function_exists( 'yit_get_plugin_basename_from_slug' ) ) {
     }
 }
 
-if( ! function_exists( 'yit_debug') ) {
+if( ! function_exists( 'yith_debug') ) {
     /**
      * Debug helper function.  This is a wrapper for var_dump() that adds
      * the <pre /> tags, cleans up newlines and indents, and runs
@@ -59,7 +59,7 @@ if( ! function_exists( 'yit_debug') ) {
      * @param  ...
      * @return string
      */
-    function yit_debug() {
+    function yith_debug() {
         $args = func_get_args();
         if( !empty( $args ) ) {
             foreach( $args as $k=>$arg ) {
@@ -86,5 +86,146 @@ if( ! function_exists( 'yit_debug') ) {
         }
 
         return $args;
+    }
+}
+
+
+if( ! function_exists('yit_get_options_from_prefix') ) {
+    /**
+     * Returns an array of all options that starts with a prefix
+     *
+     * @param string $prefix
+     * @return array
+     */
+    function yit_get_options_from_prefix( $prefix ) {
+        if( !$prefix ) return array();
+
+        global $wpdb;
+
+        $sql = "SELECT option_name FROM {$wpdb->options} WHERE option_name LIKE '{$prefix}%'";
+        $options =  $wpdb->get_col( $sql );
+        $return = array();
+
+        foreach( $options as $option ) {
+            $return[$option] = get_option( $option );
+        }
+
+        return $return;
+    }
+}
+
+if( !function_exists('yit_wp_roles') ) {
+    /**
+     * Returns the roles of the site.
+     *
+     * @return array
+     * @since 1.0.0
+     */
+    function yit_wp_roles() {
+        global $wp_roles;
+
+        if ( ! isset( $wp_roles ) ) $wp_roles = new WP_Roles();
+
+        $roles = array();
+        foreach( $wp_roles->roles as $k=>$role ) {
+            $roles[$k] = $role['name'];
+        }
+
+        return $roles;
+    }
+}
+
+if( !function_exists('yit_user_roles') ) {
+    /**
+     * Returns the roles of the user
+     *
+     * @param int $user_id (Optional) The ID of a user. Defaults to the current user.
+     * @return array()
+     * @since 1.0.0
+     */
+    function yit_user_roles( $user_id = null ) {
+        if ( is_numeric( $user_id ) )
+            $user = get_userdata( $user_id );
+        else
+            $user = wp_get_current_user();
+
+        if ( empty( $user ) )
+            return false;
+
+        return (array) $user->roles;
+    }
+}
+
+
+// ADMIN
+if( !function_exists('yit_typo_option_to_css') ) {
+    /**
+     * Change the typography option saved in database to attributes for css
+     *
+     * @param array $option The option as saved in the database
+     * @return string
+     * @since 1.0.0
+     */
+    function yit_typo_option_to_css( $option ) {
+        $attrs = $variant = array();
+
+        extract( $option );
+        $attrs[] = "color: $color;";
+        $attrs[] = "font-size: {$size}{$unit};";
+        $attrs[] = "font-family: '{$family}';";
+        switch ( $style ) {
+            case 'regular':
+                $attrs[] = 'font-weight: 400;';
+                $attrs[] = 'font-style: normal;';
+                $variant = 400;
+                break;
+            case 'bold':
+                $attrs[] = 'font-weight: 700;';
+                $attrs[] = 'font-style: normal;';
+                $variant = 700;
+                break;
+            case 'extra-bold':
+                $attrs[] = 'font-weight: 800;';
+                $attrs[] = 'font-style: normal;';
+                $variant = 800;
+                break;
+            case 'italic':
+                $attrs[] = 'font-weight: 400;';
+                $attrs[] = 'font-style: italic;';
+                $variant = 400;
+                break;
+            case 'bold-italic':
+                $attrs[] = 'font-weight: 700;';
+                $attrs[] = 'font-style: italic;';
+                $variant = 700;
+                break;
+        }
+
+        yith_add_google_font( $family, $variant );
+
+        return implode( "\n", $attrs ) . "\n";
+    }
+}
+
+
+if( !function_exists('yit_curPageURL') ) {
+    /**
+     * Retrieve the current complete url
+     *
+     * @since 1.0
+     */
+    function yit_curPageURL() {
+        $pageURL = 'http';
+        if ( isset( $_SERVER["HTTPS"] ) AND $_SERVER["HTTPS"] == "on" )
+            $pageURL .= "s";
+
+        $pageURL .= "://";
+
+        if ( isset( $_SERVER["SERVER_PORT"] ) AND $_SERVER["SERVER_PORT"] != "80" )
+            $pageURL .= $_SERVER["SERVER_NAME"].":".$_SERVER["SERVER_PORT"].$_SERVER["REQUEST_URI"];
+        else
+            $pageURL .= $_SERVER["SERVER_NAME"].$_SERVER["REQUEST_URI"];
+
+        return $pageURL;
     }
 }

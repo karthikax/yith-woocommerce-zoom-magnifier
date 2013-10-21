@@ -4,7 +4,7 @@
  *
  * @author Your Inspiration Themes
  * @package YITH WooCommerce Zoom Magnifier
- * @version 1.0.0
+ * @version 1.0.7
  */
 
 if ( !defined( 'YITH_WCMG' ) ) { exit; } // Exit if accessed directly
@@ -62,8 +62,8 @@ if( !class_exists( 'YITH_WCMG_Admin' ) ) {
 			
 			add_action( 'woocommerce_settings_tabs_yith_wcmg', array( $this, 'print_plugin_options' ) );
 			add_action( 'woocommerce_update_options_yith_wcmg', array( $this, 'update_options' ) );
-			add_action( 'woocommerce_admin_field_slider', array( $this, 'admin_fields_slider' ) );
-            add_action( 'woocommerce_admin_field_picker', array( $this, 'admin_fields_picker' ) );
+            if ( !has_action('woocommerce_admin_field_slider')) add_action( 'woocommerce_admin_field_slider', array( $this, 'admin_fields_slider' ) );
+            if ( !has_action('woocommerce_admin_field_picker')) add_action( 'woocommerce_admin_field_picker', array( $this, 'admin_fields_picker' ) );
             add_action( 'woocommerce_admin_field_banner', array( $this, 'admin_fields_banner' ) );
 			add_action( 'admin_print_footer_scripts', array( $this, 'admin_fields_image_deps' ) );
 
@@ -181,10 +181,12 @@ if( !class_exists( 'YITH_WCMG_Admin' ) ) {
                 </ul>
                 <br class="clear" />
                 
-                <?php foreach( $this->options as $id => $tab ) : ?>
+                <?php
+                $option_theme = apply_filters('yith_wcmg_options_theme_plugin', $this->options );
+                foreach( $option_theme as $id => $tab ) : ?>
                 <!-- tab #<?php echo $id ?> -->
                 <div class="section" id="yith_wcmg_<?php echo $id ?>">
-                    <?php woocommerce_admin_fields( $this->options[$id] ) ?>
+                    <?php woocommerce_admin_fields( $option_theme[$id] ) ?>
                 </div>
                 <?php endforeach ?>
             </div>

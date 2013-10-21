@@ -4,7 +4,7 @@
  *
  * @author Your Inspiration Themes
  * @package YITH WooCommerce Zoom Magnifier
- * @version 1.0.0
+ * @version 1.0.7
  */
 
 if ( !defined( 'YITH_WCMG' ) ) { exit; } // Exit if accessed directly
@@ -34,20 +34,25 @@ if( !class_exists( 'YITH_WCMG_Frontend' ) ) {
     	public function __construct( $version ) {
             $this->version = $version;
 
-			if( yith_wcmg_is_enabled() ) {
-				//change the templates
-				remove_action( 'woocommerce_before_single_product_summary', 'woocommerce_show_product_images', 20 );
-				remove_action( 'woocommerce_product_thumbnails', 'woocommerce_show_product_thumbnails', 20 );
-				add_action( 'woocommerce_before_single_product_summary', array($this, 'show_product_images'), 20 );
-				add_action( 'woocommerce_product_thumbnails', array($this, 'show_product_thumbnails'), 20 );
-				
-				//custom styles and javascripts
-				add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_styles_scripts' ) );
-				
-				//add attributes to product variations
-				add_filter( 'woocommerce_available_variation', array( $this, 'available_variation' ), 10, 3);
-			}
+            // add the action only when the loop is initializate
+			add_action( 'template_redirect', array( $this, 'render' ) );
     	}
+
+        public function render() {
+            if( yith_wcmg_is_enabled() && ! $this->is_video_featured_enabled() ) {
+                //change the templates
+                remove_action( 'woocommerce_before_single_product_summary', 'woocommerce_show_product_images', 20 );
+                remove_action( 'woocommerce_product_thumbnails', 'woocommerce_show_product_thumbnails', 20 );
+                add_action( 'woocommerce_before_single_product_summary', array($this, 'show_product_images'), 20 );
+                add_action( 'woocommerce_product_thumbnails', array($this, 'show_product_thumbnails'), 20 );
+
+                //custom styles and javascripts
+                add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_styles_scripts' ) );
+
+                //add attributes to product variations
+                add_filter( 'woocommerce_available_variation', array( $this, 'available_variation' ), 10, 3);
+            }
+        }
 		
 		
 		/**
@@ -106,11 +111,27 @@ if( !class_exists( 'YITH_WCMG_Frontend' ) ) {
 		 * @since 1.0.0
 		 */
 		public function available_variation( $data, $wc_prod, $variation ) {
+
 			$attachment_id = get_post_thumbnail_id( $variation->get_variation_id() );
 			$attachment = wp_get_attachment_image_src( $attachment_id, 'shop_magnifier' );
 
 			$data['image_magnifier'] = $attachment ? current( $attachment ) : '';
 			return $data;
 		}
+
+        /**
+         * Detect if the featured video is enabled
+         */
+        public function is_video_featured_enabled() {
+            global $post;
+            if ( ! isset( $post->ID ) ) return;
+
+            $featured_video = get_post_meta( $post->ID, '_video_url', true );
+            if ( ! empty( $featured_video ) ) {
+                return true;
+            } else {
+                return false;
+            }
+        }
     }
 }
