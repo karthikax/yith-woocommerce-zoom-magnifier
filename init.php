@@ -3,7 +3,7 @@
 * Plugin Name: YITH WooCommerce Zoom Magnifier
 * Plugin URI: http://yithemes.com/
 * Description: YITH WooCommerce Zoom Magnifier enables you to add a zoom effect to product images.
-* Version: 1.0.7
+* Version: 1.0.8
 * Author: Your Inspiration Themes
 * Author URI: http://yithemes.com/
 * Text Domain: yit
@@ -11,7 +11,7 @@
 * 
 * @author Your Inspiration Themes
 * @package YITH WooCommerce Magnifier
-* @version 1.0.7
+* @version 1.0.8
 */
 /*  Copyright 2013  Your Inspiration Themes  (email : plugins@yithemes.com)
 

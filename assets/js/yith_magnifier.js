@@ -167,6 +167,7 @@
         loadingLabel: 'Loading...',
 
         enableSlider: true,
+        slider: 'carouFredSel',
         sliderOptions: {},
 
         onLoad : function() { return false; },
@@ -243,7 +244,7 @@
                 //gallery.filter(':first').trigger('click');
 
                 if( self.options.enableSlider ) {
-                    gallery.parents('ul').carouFredSel( self.options.sliderOptions );
+                    gallery.parents('ul')[self.options.slider]( self.options.sliderOptions );
                 }
 
             } else {
