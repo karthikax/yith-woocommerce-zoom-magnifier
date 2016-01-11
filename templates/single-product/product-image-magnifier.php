@@ -12,6 +12,10 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 global $post, $woocommerce, $product, $is_IE;
 
 $enable_slider = get_option('yith_wcmg_enableslider') == 'yes' ? true : false;
+$direction = get_option('yith_wcmg_slider_direction') ? get_option('yith_wcmg_slider_direction') : 'left';
+$direction = apply_filters ( 'yith_wcmg_slider_direction', $direction );
+$prev_key = apply_filters ( 'yith_wcmg_prev_key', 'left' );
+$next_key = apply_filters ( 'yith_wcmg_next_key', 'right' );
 ?>
     <div class="images<?php if($is_IE): ?> ie<?php endif ?>">
 
@@ -44,18 +48,18 @@ $enable_slider = get_option('yith_wcmg_enableslider') == 'yes' ? true : false;
             responsive: <?php echo get_option('yith_wcmg_slider_responsive') == 'yes' ? 'true' : 'false' ?>,
             circular: <?php echo get_option('yith_wcmg_slider_circular') == 'yes' ? 'true' : 'false' ?>,
             infinite: <?php echo get_option('yith_wcmg_slider_infinite') == 'yes' ? 'true' : 'false' ?>,
-            //direction: '<?php //echo get_option('yith_wcmg_slider_direction') == 'yes' ? 'left' : get_option('yith_wcmg_slider_direction') ?>',
-            direction: 'left',
+            direction: <?php echo $direction; ?>,
+            //direction: 'left',
             debug: false,
             auto: false,
             align: 'left',
             prev	: {
                 button	: "#slider-prev",
-                key		: "left"
+                key		: <?php echo $prev_key; ?>
             },
             next	: {
                 button	: "#slider-next",
-                key		: "right"
+                key		: <?php echo $next_key; ?>
             },
             //width   : <?php echo yit_shop_single_w() + 18 ?>,
             scroll : {
